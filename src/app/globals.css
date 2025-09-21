@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+/* --color-logotype: #2887C4; */
+}
+
+
+@theme {
+  --color-logotype: #2887C4;
+  --color-white:#ffffff;
+  --color-black:#000000;
+  --color-gray:#757575;
+
+ 
+
+}
+
+
+/* global.css */
+.btn-logotype {
+  @apply px-8 py-4 text-white font-semibold rounded-lg transition-all duration-300 transform shadow-lg;
+  background-color: var(--color-logotype);
+}
+
+.btn-logotype:hover {
+  background-color: white;
+  color: var(--color-logotype);
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
