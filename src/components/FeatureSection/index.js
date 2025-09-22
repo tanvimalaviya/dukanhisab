@@ -58,7 +58,11 @@ export default function FeatureHighlight() {
       {/* Optional CTA */}
       <div className="text-center mt-12">
         <Link href={"/features"}>
-          <button className="btn-logotype">View All</button>
+          <button className="btn-logotype  
+          transition-colors duration-300 
+                   transform hover:scale-105 
+                   shadow-md hover:shadow-lg
+                   ">View All</button>
         </Link>
       </div>
     </section>

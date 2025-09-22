@@ -48,7 +48,8 @@ const Navbar = () => {
 
         {/* Right Side - Menu */}
         <div className="hidden md:flex space-x-6 items-center">
-          {["Home", "About", "Contact", "Pricing", "Features"].map((item) => (
+          <Link href={"/"} className="text-white">Home</Link>
+          {[ "About", "Contact", "Pricing", "Features"].map((item) => (
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
