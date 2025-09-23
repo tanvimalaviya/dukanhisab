@@ -44,7 +44,7 @@ export default function WhyOurApp() {
         {reasons.map((reason, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition"
+            className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow hover:shadow-xl transition"
           >
             <Image src={reason.icon} alt={reason.title} width={60} height={60} />
             <div>

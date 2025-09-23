@@ -21,7 +21,7 @@ const page = () => {
      <ReminderSection/>
      <Testimonials/>
      <CTASection/>
-     <Footer/>
+     {/* <Footer/> */}
     </div>
   )
 }
