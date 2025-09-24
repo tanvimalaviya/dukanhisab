@@ -14,7 +14,7 @@ import { IoMdMail } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-200 pt-12">
+    <footer className="bg-gray-900 text-gray-200 pt-6">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
@@ -125,7 +125,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm pb-10">
+      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-gray-500 text-sm pb-2">
         <p>© 2025 Dukanhisab. All rights reserved.</p>
       </div>
     </footer>

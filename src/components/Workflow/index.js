@@ -1,45 +1,3 @@
-// import { FaUserTie, FaUsers, FaMoneyBillWave, FaBoxes, FaBell, FaChartLine } from "react-icons/fa";
-
-// const steps = [
-//   { icon: <FaUserTie size={28} />, title: "Create Business Profile", desc: "Set up your shop in just a few steps." },
-//   { icon: <FaUsers size={28} />, title: "Add Customers & Suppliers", desc: "Keep all your contacts organized." },
-//   { icon: <FaMoneyBillWave size={28} />, title: "Record Income & Expenses", desc: "Track transactions with ease." },
-//   { icon: <FaBoxes size={28} />, title: "Manage Inventory", desc: "Monitor stock levels in real-time." },
-//   { icon: <FaBell size={28} />, title: "Track Udhar & Payments", desc: "Get timely reminders for dues." },
-//   { icon: <FaChartLine size={28} />, title: "View Reports", desc: "Download PDF/Excel reports instantly." },
-// ];
-
-// export default function AppFlow() {
-//   return (
-//     <section className="py-20 bg-gray-50">
-//       <div className="max-w-7xl mx-auto px-6 text-center">
-//         {/* Header */}
-//         <h2 className="text-4xl font-bold text-gray-800">How DukanHisab Works</h2>
-//         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-//           Manage your business in just a few simple steps with DukanHisab.
-//         </p>
-
-//         {/* Steps */}
-//         <div className="mt-12 grid md:grid-cols-3 gap-10">
-//           {steps.map((step, i) => (
-//             <div key={i} className="relative bg-white p-6 rounded-2xl shadow hover:shadow-lg transition group">
-//               {/* Step number */}
-//               <div className="absolute -top-4 -left-4 w-10 h-10 flex items-center justify-center bg-purple-600 text-white rounded-full font-bold shadow">
-//                 {i + 1}
-//               </div>
-//               {/* Icon */}
-//               <div className="text-purple-600 mb-4 group-hover:scale-110 transition">{step.icon}</div>
-//               <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
-//               <p className="mt-2 text-gray-600 text-sm">{step.desc}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-
 import {
   FaUserTie,
   FaUsers,
@@ -85,33 +43,42 @@ const steps = [
 export default function AppFlowTimeline() {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800">
+          <h2 className="text-4xl font-bold text-graytext">
             How DukanHisab Works
           </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-4 text-gray max-w-2xl mx-auto">
             A simple step-by-step workflow to make your business management easy
             and effective.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative border-l-2 border-purple-600 pl-8 space-y-10">
+        <div className="relative pl-12 space-y-10">
           {steps.map((step, i) => (
-            <div key={i} className="relative group">
+            <div key={i} className="relative flex ">
+              {/* Line (skip last) */}
+              {i !== steps.length - 1 && (
+               <span className="absolute left-[18px] top-12 bottom-0 w-[2px] bg-logotype"></span>
+              )}
+
               {/* Circle Icon */}
-              <div className="absolute -left-12 top-0 w-10 h-10 flex items-center justify-center bg-purple-600 text-white rounded-full shadow-lg group-hover:scale-110 transition">
-                {step.icon}
+              <div className="absolute left-0 top-0">
+                <div className="w-10 h-10 flex items-center justify-center bg-logotype text-white rounded-full shadow-lg">
+                  {step.icon}
+                </div>
               </div>
 
               {/* Step Content */}
-              <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                <h3 className="text-xl font-semibold text-gray-800">
-                  {i + 1}. {step.title}
-                </h3>
-                <p className="mt-2 text-gray-600 text-sm">{step.desc}</p>
+              <div className="ml-14 flex-1">
+                <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                  <h3 className="text-xl font-semibold text-graytext">
+                    {i + 1}. {step.title}
+                  </h3>
+                  <p className="mt-2 text-gray-600 text-sm">{step.desc}</p>
+                </div>
               </div>
             </div>
           ))}
