@@ -23,23 +23,26 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full top-0 left-0 z-50 transition-colors duration-500 ${
-        scrolled ? "bg-logotype shadow-md" : "bg-transparent"
+      className={`fixed w-full top-0 left-0 z-50  transition-colors duration-500 ${
+        scrolled ? "bg-logotype shadow-md" : "bg-white"
       }`}
     >
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="container mx-auto  px-6 py-3 flex items-center justify-between">
         {/* Left Side - Logo */}
         <div className="text-3xl font-bold flex items-center justify-center">
-          <Image
-            src={"/luncherAppLogo.png"}
-            alt="logo"
-            height={70}
-            width={70}
-          />
+          <Link href={"/"}>
+            <Image
+              // src={"/luncherAppLogo.png"}
+              src={scrolled ? "/luncherAppLogo.png" : "/logo2.jpg"}
+              alt="logo"
+              height={70}
+              width={70}
+            />
+          </Link>
           <Link
             href="/"
-            className={`no-underline font-bold ml-2 ${
-              scrolled ? "text-white" : "text-white"
+            className={`!no-underline  font-bold ml-2 ${
+              scrolled ? "text-white" : "text-logotype"
             }`}
           >
             DukanHisab
@@ -47,14 +50,16 @@ const Navbar = () => {
         </div>
 
         {/* Right Side - Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <Link href={"/"} className="text-white">Home</Link>
-          {[ "About", "Contact", "Pricing", "Features"].map((item) => (
+        <div className="hidden md:flex  space-x-6 items-center">
+          <Link href={"/"} className={`!no-underline ${scrolled ? "text-white " : "text-logotype " }`}>
+            Home
+          </Link>
+          {["About", "Contact", "Pricing", "Features"].map((item) => (
             <Link
               key={item}
               href={`/${item.toLowerCase()}`}
-              className={`hover:text-gray-500 no-underline transition-colors ${
-                scrolled ? "text-white" : "text-white"
+              className={`hover:text-gray-500 !no-underline transition-colors ${
+                scrolled ? "text-white" : "text-logotype"
               }`}
             >
               {item}
@@ -62,17 +67,20 @@ const Navbar = () => {
           ))}
           <Link
             href="/login"
-            className={`px-4 py-2 border rounded-lg text-center transition-colors ${
+            className={`px-4 py-2 border rounded-lg text-center !no-underline transition-colors ${
               scrolled
-                ? "bg-logotype text-white hover:bg-gray-100"
-                : "bg-white text-logotype hover:bg-gray-100"
+                // ? "bg-logotype text-white hover:bg-white hover:text-blue-400"
+                ? "btn-logotype bg-white !text-logotype hover:shadow-none"
+                // : "bg-white text-logotype hover:bg-logotype hover:text-white"
+                : "btn-logotype "
             }`}
           >
             Login
           </Link>
+
           <Link
             href="/signup"
-            className={`px-4 py-2 border rounded-lg text-center transition-colors ${
+            className={`px-4 py-2 border !no-underline rounded-lg text-center transition-colors ${
               scrolled
                 ? "bg-logotype text-white hover:bg-blue-700"
                 : "bg-white text-logotype hover:bg-gray-100"

@@ -56,32 +56,33 @@ export default function AppFlowTimeline() {
         </div>
 
         {/* Timeline */}
-        <div className="relative pl-12 space-y-10">
-          {steps.map((step, i) => (
-            <div key={i} className="relative flex ">
-              {/* Line (skip last) */}
-              {i !== steps.length - 1 && (
-               <span className="absolute left-[18px] top-12 bottom-0 w-[2px] bg-logotype"></span>
-              )}
+        <div className="relative pl-12">
+          {/* Full vertical timeline line */}
+          <div className="absolute left-[18px] top-10 bottom-17 w-[2px] bg-logotype z-0"></div>
 
-              {/* Circle Icon */}
-              <div className="absolute left-0 top-0">
-                <div className="w-10 h-10 flex items-center justify-center bg-logotype text-white rounded-full shadow-lg">
-                  {step.icon}
+          {/* Steps */}
+          <div className="space-y-10 relative z-10">
+            {steps.map((step, i) => (
+              <div key={i} className="relative flex">
+                {/* Icon */}
+                <div className="absolute -left-12 top-5 z-20">
+                  <div className="w-10 h-10 flex items-center justify-center bg-logotype text-white rounded-full shadow-lg">
+                    {step.icon}
+                  </div>
+                </div>
+
+                {/* Step Content */}
+                <div className="ml-7 flex-1">
+                  <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                    <h3 className="text-xl font-semibold text-graytext">
+                      {i + 1}. {step.title}
+                    </h3>
+                    <p className="mt-2 text-gray-600 text-sm">{step.desc}</p>
+                  </div>
                 </div>
               </div>
-
-              {/* Step Content */}
-              <div className="ml-14 flex-1">
-                <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-                  <h3 className="text-xl font-semibold text-graytext">
-                    {i + 1}. {step.title}
-                  </h3>
-                  <p className="mt-2 text-gray-600 text-sm">{step.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

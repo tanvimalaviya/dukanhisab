@@ -77,12 +77,12 @@ const Footer = () => {
             </li>
 
             <li>
-              <a href="/terms" className="hover:text-white transition">
+              <a href="https:\\dukanhisab.sathwarainfotech.com\public\terms_and_condition.html" className="hover:text-white transition">
                 Terms & Conditions
               </a>
             </li>
             <li>
-              <a href="/privacy" className="hover:text-white transition">
+              <a href="https:\\dukanhisab.sathwarainfotech.com\public\privacy_policy.html" className="hover:text-white transition">
                 Privacy Policy
               </a>
             </li>
