@@ -27,7 +27,7 @@ const ContactForm = () => {
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
             Send Us a Message
           </h2>
@@ -35,7 +35,7 @@ const ContactForm = () => {
             Have a question or need support? Fill out the form and our team will
             contact you shortly.
           </p>
-        </div>
+        </div> */}
 
         {/* Layout with Lottie + Form */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -155,7 +155,7 @@ const ContactForm = () => {
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className="px-6 py-3 bg-logotype text-white font-semibold rounded-lg shadow hover:bg-purple-700 transition"
+                className="px-6 py-3 bg-logotype text-white font-semibold !rounded-lg shadow  transition"
               >
                 Send Message
               </button>

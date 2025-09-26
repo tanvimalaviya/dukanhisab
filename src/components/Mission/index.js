@@ -4,19 +4,19 @@ import React from 'react'
 const missiondata = [
   {
     id: 1,
-    icon: "/about1.png",
+    icon: "/log.png",
     title: "Track Dues and Debts",
     desc: "Easily keep track of who owes you and who you owe.",
   },
   {
     id: 2,
-    icon: "/about2.png",
+    icon: "/allocation.png",
     title: "Manage Expenses",
     desc: "Simplify splitting bills and managing shared expenses for trips, events, and everyday activities.",
   },
   {
     id: 3,
-    icon: "/about3.png",
+    icon: "/monitor.png",
     title: "Monitor Incomes",
     desc: "Track your incomes and ensure you stay on top of your financial goals.",
   },
@@ -50,6 +50,7 @@ const Mission = () => {
                   alt={item.title}
                   width={38}
                   height={38}
+                  className=''
                 />
               </div>
             </div>

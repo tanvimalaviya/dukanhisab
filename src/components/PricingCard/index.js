@@ -1,149 +1,9 @@
-// "use client";
-// import React from "react";
-// import { FaCheck } from "react-icons/fa";
-
-// const plans = [
-//   {
-//     name: "1 Month Plan",
-//     price: "₹100",
-//     duration: "per month",
-//     desc: "Best for trying out all features for a short time.",
-//     features: [
-//       "Business profile setup",
-//       "Add customers & suppliers",
-//       "Record income & expenses",
-//       "Basic reports",
-//     ],
-//     button: "Get Started",
-//     // highlighted: false,
-//   },
-//   {
-//     name: "6 Months Plan",
-//     price: "₹400",
-//     duration: "every 6 months",
-//     desc: "Save more with half-yearly subscription.",
-//     features: [
-//       "Everything in 1 Month Plan",
-//       "Inventory management",
-//       "Payment reminders",
-//       "Priority support",
-//     ],
-//     button: "Choose 6 Months",
-//     // highlighted: true,
-//   },
-//   {
-//     name: "1 Year Plan",
-//     price: "₹600",
-//     duration: "every year",
-//     desc: "Best value for growing businesses.",
-//     features: [
-//       "Everything in 6 Months Plan",
-//       "Downloadable reports (Excel/PDF)",
-//       "Unlimited customers & suppliers",
-//       "Dedicated support",
-//     ],
-//     button: "Choose 1 Year",
-//     // highlighted: false,
-//   },
-//   {
-//     name: "Starter Plan",
-//     price: "₹50",
-//     duration: "per month",
-//     desc: "For individuals just getting started.",
-//     features: ["Basic bookkeeping", "Customer management", "Email support"],
-//     button: "Start Free Trial",
-//     // highlighted: false,
-//   },
-//   {
-//     name: "Business Plan",
-//     price: "₹1200",
-//     duration: "per year",
-//     desc: "For small teams who need more control.",
-//     features: [
-//       "Team collaboration",
-//       "Advanced analytics",
-//       "Priority assistance",
-//     ],
-//     button: "Choose Business",
-//     // highlighted: true,
-//   },
-//   {
-//     name: "Enterprise Plan",
-//     price: "Custom",
-//     duration: "contact sales",
-//     desc: "Tailored solutions for large businesses.",
-//     features: [
-//       "Dedicated account manager",
-//       "Custom integrations",
-//       "24/7 phone support",
-//     ],
-//     button: "Contact Sales",
-//     // highlighted: false,
-//   },
-// ];
-
-// export default function PricingPage() {
-//   return (
-//     <section className="py-20 bg-gray-50">
-//       <div className="max-w-7xl mx-auto px-6">
-//         {/* Pricing Grid */}
-//         <div className="grid md:grid-cols-3 gap-8">
-//           {plans.map((plan, idx) => (
-//             <div
-//               key={idx}
-//               className={`rounded-2xl shadow-md p-8 flex flex-col border transition hover:scale-105 hover:shadow-xl ${
-//                 plan.highlighted
-//                   ? "border-logotype bg-white shadow-2xl"
-//                   : "border-gray-200 bg-white"
-//               }`}
-//             >
-//               {plan.highlighted && (
-//                 <span className="px-3 py-1 text-xs font-medium text-white bg-logotype rounded-full mb-4 self-start">
-//                   Best Value
-//                 </span>
-//               )}
-//               <h3 className="text-xl font-bold text-gray-800">{plan.name}</h3>
-//               <p className="text-gray-500 mt-1">{plan.desc}</p>
-
-//               {/* Price */}
-//               <div className="mt-6 text-3xl font-bold text-gray-800">
-//                 {plan.price}
-//               </div>
-//               <p className="text-gray-500 text-sm">{plan.duration}</p>
-
-//               {/* Features */}
-//               <ul className="mt-6 space-y-2 text-gray-600 text-left">
-//                 {plan.features.map((feature, i) => (
-//                   <li key={i} className="flex items-center gap-2">
-//                     <FaCheck /> <span>{feature}</span>
-//                   </li>
-//                 ))}
-//               </ul>
-
-//               {/* Button */}
-//               <button
-//                 className={`mt-8 px-6 py-3 rounded-lg font-semibold w-full transition ${
-//                   plan.highlighted
-//                     ? "bg-logotype text-white hover:bg-logotype/90"
-//                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-//                 }`}
-//               >
-//                 {plan.button}
-//               </button>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 
 const monthlyPlans = [
-   {
+  {
     name: "Free Plan",
     price: "₹0",
     duration: "per month",
@@ -164,7 +24,7 @@ const monthlyPlans = [
     ],
     button: "Get Started",
   },
- 
+
   {
     name: "Team Plan",
     price: "₹200",
@@ -296,12 +156,10 @@ export default function PricingPage() {
   const plans = billingCycle === "monthly" ? monthlyPlans : yearlyPlans;
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20 ">
+      <div className="max-w-8xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
-          
-
           {/* Toggle */}
           <div className="mt-6 flex justify-center">
             <div className="flex items-center bg-gray-200 rounded-full p-1">
@@ -345,11 +203,11 @@ export default function PricingPage() {
                   Best Value
                 </span>
               )}
-              <h3 className="text-xl font-bold text-gray-800">{plan.name}</h3>
+              <h3 className="!text-lg  text-gray-800">{plan.name}</h3>
               <p className="text-gray-500 mt-1">{plan.desc}</p>
 
               {/* Price */}
-              <div className="mt-6 text-3xl font-bold text-gray-800">
+              <div className="mt-6 text-5xl  text-gray-800">
                 {plan.price}
               </div>
               <p className="text-gray-500 text-sm">{plan.duration}</p>
@@ -364,7 +222,7 @@ export default function PricingPage() {
               </ul>
 
               {/* Button */}
-              <button className="mt-8 px-6 py-3 rounded-lg font-semibold w-full transition bg-logotype text-white hover:bg-logotype/90">
+              <button className="mt-4 !px-4 py-2  !rounded-full font-semibold w-full transition bg-logotype text-white hover:bg-logotype/90">
                 {plan.button}
               </button>
             </div>

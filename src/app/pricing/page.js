@@ -16,7 +16,7 @@ const page = () => {
       />
       <PricingPage />
       <Compareplan />
-      <FAQSection />
+      <FAQSection/>
       <CTAabout />
     </div>
   );

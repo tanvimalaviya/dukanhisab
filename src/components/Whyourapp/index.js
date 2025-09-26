@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { SiEasyeda } from "react-icons/si";
 
 
@@ -75,9 +76,11 @@ export default function WhyOurApp() {
 
       {/* CTA */}
       <div className="text-center">
+        <Link href={"/contact"}>
         <button className="btn-logotype">
           Get Started with Dukanhisab
         </button>
+        </Link>
       </div>
     </section>
   );

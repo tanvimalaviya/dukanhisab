@@ -7,7 +7,7 @@ import { ImCross } from "react-icons/im";
 
 const Compareplan = () => {
   return (
-    <section className="py-12 bg-gray-50">
+    <section className="py-12 ">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-8">
@@ -87,10 +87,16 @@ const Compareplan = () => {
 
         {/* CTA below table */}
         <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
-            Still unsure?{" "}
-           <Link href={"/contact"}> <button className="text-logotype font-medium underline">Contact us</button></Link> for a custom plan.
-          </p>
+          <p className="text-base text-gray-800">
+  Still unsure?{" "}
+  <Link href="/contact">
+    <button className="ml-1 px-3 py-1 bg-logotype text-white rounded-md text-sm font-medium hover:bg-logotype/90 transition">
+      Contact us
+    </button>
+  </Link>{" "}
+  for a custom plan.
+</p>
+
         </div>
       </div>
     </section>
