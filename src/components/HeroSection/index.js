@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaYoutube } from "react-icons/fa";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -26,7 +27,7 @@ const HeroSection = () => {
         {/* Left Side - Mobile Image */}
         <div className="w-full lg:w-1/2 flex justify-center  mb-10 lg:mb-0 pt-6 md:pt-10">
           <Image
-            src="/heroimage.png"
+            src="/heroimage2.png"
             alt="Mobile Screenshot"
             width={300}
             height={500}
@@ -45,13 +46,14 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4">
+            <Link href={"https:\\play.google.com\store\apps\details?id=com.si.dukan.hisab.dukan_hisab&hl=en"}>
             <button
               className="px-6 py-3 bg-logotype text-white font-semibold rounded-lg 
         hover:text-white transition-colors duration-300 
         transform hover:scale-105 shadow-md hover:shadow-lg"
             >
               Download Now
-            </button>
+            </button></Link>
 
             <button
               className="px-6 py-3 border border-gray-300 rounded-lg flex items-center gap-2 
