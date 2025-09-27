@@ -41,14 +41,11 @@ export default function FeatureHighlight() {
             key={idx}
             className="bg-white rounded-2xl shadow-xl p-8 flex-1 hover:scale-105 transform transition duration-300"
           >
-            <div className="mb-6">
-              <Image
-                src={feature.icon}
-                alt={feature.title}
-                width={60}
-                height={60}
-              />
+           {/* Swinging Icon */}
+            <div className="mb-6 inline-block animate-swing">
+              <Image src={feature.icon} alt={feature.title} width={60} height={60} />
             </div>
+
             <h3 className="text-2xl font-semibold mb-3">{feature.title}</h3>
             <p className="text-gray">{feature.desc}</p>
           </div>
@@ -58,11 +55,15 @@ export default function FeatureHighlight() {
       {/* Optional CTA */}
       <div className="text-center mt-12">
         <Link href={"/features"}>
-          <button className="btn-logotype  
+          <button
+            className="btn-logotype  
           transition-colors duration-300 
                    transform hover:scale-105 
                    shadow-md hover:shadow-lg
-                   ">View All</button>
+                   "
+          >
+            View All
+          </button>
         </Link>
       </div>
     </section>

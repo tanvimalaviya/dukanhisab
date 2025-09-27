@@ -32,7 +32,7 @@ const Navbar = () => {
         scrolled ? "bg-logotype shadow-md" : "bg-white"
       }`}
     >
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+      <div className=" mx-auto px-6 py-3 flex items-center justify-between">
         {/* Left Side - Logo */}
         <div className="flex items-center justify-start flex-shrink-0">
           <Link href={"/"}>
@@ -55,10 +55,10 @@ const Navbar = () => {
         </div>
 
         {/* Right Side - Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
+        <div className="hidden md:flex space-x-8 items-center">
           <Link
             href="/"
-            className={`!no-underline transition-colors ${
+            className={`!no-underline text-[17px] font-bold transition-colors ${
               pathname === "/"
                 ? "font-semibold underline decoration-2 underline-offset-4"
                 : ""
@@ -73,9 +73,9 @@ const Navbar = () => {
               <Link
                 key={item}
                 href={href}
-                className={`hover:text-gray-500 !no-underline transition-colors ${
+                className={`hover:text-gray-500 font-bold text-[17px] !no-underline transition-colors ${
                   isActive
-                    ? "font-semibold !underline decoration-2 underline-offset-4"
+                    ? "font-bold !underline decoration-2 underline-offset-4"
                     : ""
                 } ${scrolled ? "text-white" : "text-logotype"}`}
               >

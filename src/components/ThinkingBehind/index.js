@@ -78,7 +78,7 @@ export default function ThinkingBehind() {
 
                 {/* Step Content */}
                 <div className="ml-7 flex-1">
-                  <div className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+                  <div className="bg-white p-6 rounded-xl shadow-sm  transition">
                     <h3 className="text-xl font-semibold text-graytext">
                       {i + 1}. {step.title}
                     </h3>

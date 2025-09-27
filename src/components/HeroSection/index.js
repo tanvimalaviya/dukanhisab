@@ -29,14 +29,14 @@ const HeroSection = () => {
           <Image
             src="/heroimage2.png"
             alt="Mobile Screenshot"
-            width={300}
+            width={400}
             height={500}
             className="rounded-xl "
           />
         </div>
 
         {/* Right Side - Content */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left pt-16 sm:pt-20 lg:pt-24">
+        <div className="w-full lg:w-1/2 text-center lg:text-left pt-16 sm:pt-20 lg:pt-12">
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
             Simple and Powerful
           </h1>
@@ -55,6 +55,8 @@ const HeroSection = () => {
               Download Now
             </button></Link>
 
+
+            <Link href={"https://www.youtube.com/"} className="text-black !no-underline">
             <button
               className="px-6 py-3 border border-gray-300 rounded-lg flex items-center gap-2 
         hover:bg-gray-100 transition bg-white/90 duration-300 
@@ -65,6 +67,7 @@ const HeroSection = () => {
               </span>{" "}
               Watch Video
             </button>
+            </Link>           
           </div>
         </div>
       </div>

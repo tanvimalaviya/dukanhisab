@@ -131,6 +131,7 @@ import React from "react";
 import { FaPlay } from "react-icons/fa";
 import Lottie from "lottie-react";
 import reminderAnim from "@/../public/lottie1.json"; 
+import Link from "next/link";
 
 const ReminderSection = () => {
   return (
@@ -156,9 +157,11 @@ const ReminderSection = () => {
 
           {/* CTA Button */}
           <div className="flex  text-left ">
+            <Link href={"https://www.youtube.com/"}>
             <button className="bg-logotype border hover:border-logotype px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg flex items-center gap-2 btn-logotype transition text-sm sm:text-base">
               <FaPlay /> <span>Play video</span>
             </button>
+            </Link>
           </div>
         </div>
       </div>

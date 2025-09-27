@@ -44,13 +44,13 @@ const Mission = () => {
         {missiondata.map((item) => (
           <div key={item.id} className="flex items-start gap-4">
             <div className="flex-shrink-0">
-              <div className="w-18 h-18 flex items-center justify-center bg-logotype rounded-full">
+              <div className="w-18 h-18 flex items-center justify-center bg-logotype rounded-full transition transform hover:rotate-12">
                 <Image
                   src={item.icon}
                   alt={item.title}
                   width={38}
                   height={38}
-                  className=''
+                  className='transition transform hover:rotate-12'
                 />
               </div>
             </div>

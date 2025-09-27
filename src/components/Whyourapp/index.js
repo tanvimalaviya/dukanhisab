@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiEasyeda } from "react-icons/si";
+import FeatureStateSection from "../FeatuteStatSection";
 
 
 const reasons = [
@@ -45,7 +46,7 @@ export default function WhyOurApp() {
         {reasons.map((reason, idx) => (
           <div
             key={idx}
-            className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow hover:shadow-xl transition"
+            className="flex items-start gap-6 bg-white p-8 rounded-2xl shadow-sm  hover:shadow-xl transition"
           >
             <Image src={reason.icon} alt={reason.title} width={60} height={60} />
             <div>
@@ -58,21 +59,7 @@ export default function WhyOurApp() {
         ))}
       </div>
 
-      {/* Stats Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mb-16">
-        <div>
-          <h4 className="text-4xl font-bold text-logotype">10K+</h4>
-          <p className="text-gray-600 mt-2">Active Businesses</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-bold text-logotype">1M+</h4>
-          <p className="text-gray-600 mt-2">Transactions Managed</p>
-        </div>
-        <div>
-          <h4 className="text-4xl font-bold text-logotype">99.9%</h4>
-          <p className="text-gray-600 mt-2">Uptime & Reliability</p>
-        </div>
-      </div>
+    <FeatureStateSection/>
 
       {/* CTA */}
       <div className="text-center">
