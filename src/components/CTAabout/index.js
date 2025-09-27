@@ -104,14 +104,22 @@ const CTAabout = () => {
           {/* Buttons */}
           {/* <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-4"> */}
           {/* Google Play */}
-          <Link href={"https:\\play.google.com\store\apps/details?id=com.si.dukan.hisab.dukan_hisab&hl=en"} className="!no-underline">
-          <button className="flex items-center gap-3 bg-black text-white !rounded-lg shadow-lg px-4 py-2 w-auto ">
-            <FaGooglePlay size={28} />
-            <div className="flex flex-col  items-start leading-none">
-              <span className="text-xs ">GET IT ON</span>
-              <span className="text-lg font-semibold">Google Play</span>
-            </div>
-          </button>
+          <Link
+            href={
+              "https:\\play.google.comstoreapps/details?id=com.si.dukan.hisab.dukan_hisab&hl=en"
+            }
+            className="!no-underline"
+          >
+            <button
+              className="flex items-center gap-3 bg-black text-white !rounded-lg shadow-lg px-4 py-2 w-auto 
+  transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <FaGooglePlay size={28} />
+              <div className="flex flex-col items-start leading-none">
+                <span className="text-xs">GET IT ON</span>
+                <span className="text-lg font-semibold">Google Play</span>
+              </div>
+            </button>
           </Link>
         </div>
 

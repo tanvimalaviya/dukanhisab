@@ -97,7 +97,7 @@ const features = [
       "Store contact details securely",
     ],
     icon: <FaUsers size={28} className="text-logotype" />,
-    image: "/feature1.png", // 👉 replace with your image
+    image: "/feature1.png",
   },
   {
     title: "Inventory Management",
@@ -133,7 +133,7 @@ const features = [
 
 export default function DetailedFeatures() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="pt-4 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -158,13 +158,14 @@ export default function DetailedFeatures() {
               {/* Image */}
               <div className="flex-1 flex justify-center">
                 <div className="bg-white p-4 rounded-2xl shadow hover:shadow-lg transition">
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    width={450}
-                    height={300}
-                    className="rounded-xl"
-                  />
+                 <Image
+  src={feature.image}
+  alt={feature.title}
+  width={450}
+  height={300}
+  className="rounded-xl transform transition duration-500 hover:rotate-2 hover:scale-105"
+/>
+
                 </div>
               </div>
 

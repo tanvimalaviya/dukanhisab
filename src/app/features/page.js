@@ -1,3 +1,4 @@
+import AppFlow from '@/components/AppFlow'
 import HeroSection from '@/components/CommonHero'
 import CTASection from '@/components/CTASection'
 import DetailedFeatures from '@/components/DetailedFeature'
@@ -21,7 +22,9 @@ const page = () => {
      <FeatureShowcase/>
      {/* <FeatureHighlights/> */}
       <DetailedFeatures/>
-      <Workflow/>
+      {/* <Workflow/> */}
+      <AppFlow/>  
+       {/* usinG screenshot */}
       <FeatureWhyChoose/>
       <CTASection/>
     </div>

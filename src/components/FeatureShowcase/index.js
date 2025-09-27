@@ -48,12 +48,12 @@ const rightFeatures = [
 export default function FeatureShowcase() {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto px-4 text-center">
         {/* Section Heading */}
-        <h2 className="!text-5xl font-bold text-graytext">
+        {/* <h2 className="!text-5xl font-bold text-graytext">
           Our Top Features
-        </h2>
-        <p className="mt-4 text-lg text-gray max-w-2xl mx-auto">
+        </h2> */}
+        <p className=" text-lg text-gray max-w-2xl mx-auto">
           Discover the powerful tools that make <span className="font-semibold">DukanHisab</span> 
           the ultimate solution for managing your business and personal finances.
         </p>
