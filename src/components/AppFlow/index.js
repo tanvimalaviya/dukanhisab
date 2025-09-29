@@ -1,114 +1,89 @@
-// components/AppFlowDiagram.js
-"use client";
-
 import React from "react";
-import Image from "next/image";
 
-const steps = [
-  {
-    id: 1,
-    title: "Create Business Profile",
-    desc: [
-      "Quickly set up your store profile and get started.",
-      "Add your business details in minutes.",
-      "Personalize with your store name & logo."
-    ],
-    screenshot: "/heroimage2.png",
-  },
-  {
-    id: 2,
-    title: "Add Customers & Suppliers",
-    desc: [
-      "Save all customer & supplier details securely.",
-      "Easily search and update records.",
-      "Build trust with organized data."
-    ],
-    screenshot: "/addcustomer.jpg",
-    screenshot2:"/addsupplier.jpg"
-  },
-  {
-    id: 3,
-    title: "Record Income & Expenses",
-    desc: [
-      "Track sales, purchases, and daily expenses.",
-      "Get clear insights into cash flow.",
-      "Reduce manual errors with automation."
-    ],
-    screenshot: "/addexpense.jpg",
+export default function AppFlow() {
+  const steps = [
+    { id: 1, title: "First sign up", img: "/heroimage2.png" },
+    { id: 2, title: "Create Business Profile", img: "/heroimage2.png" },
+    { id: 3, title: "Add customer", img: "/heroimage2.png" },
+    { id: 4, title: "Add Supplier", img: "/heroimage2.png" },
+    { id: 5, title: "Add Expense", img: "/heroimage2.png" },
+    { id: 6, title: "Add Item", img: "/heroimage2.png" },
+    { id: 7, title: "Add Purchase", img: "/heroimage2.png" },
+    { id: 8, title: "Add Sale", img: "/heroimage2.png" },
+    { id: 9, title: "Add Cash-Transaction", img: "/heroimage2.png" },
+    { id: 10, title: "Show Monthly or Daily report", img: "/heroimage2.png" },
+    { id: 11, title: "Report the data", img: "/heroimage2.png" },
+    { id: 12, title: "Show summary in dashboard", img: "/heroimage2.png" },
+  ];
 
-  },
-];
-
-const AppFlowDiagram = () => {
   return (
-    <section className="py-16 bg-gray-50 relative">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900">
-            How Dukanhisab Works
-          </h2>
-          <p className="mt-4 text-gray-600 text-lg">
-            Simple, step-by-step workflow to manage your store efficiently.
-          </p>
-        </div>
+    <div className="bg-white py-10 px-4 sm:px-8 lg:px-20">
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-gray-900">
+          How Dukanhisab Works
+        </h2>
+        <p className="mt-4 text-gray-600 text-lg">
+          Simple, step-by-step workflow to manage your store efficiently.
+        </p>
+      </div>
 
-        {/* Steps */}
-        <div className="flex flex-col gap-20 relative ">
-          {steps.map((step, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-28 relative">
+        {steps.map((step, idx) => {
+          const row = Math.floor(idx / 4); // current row
+          const isRowEnd = (idx + 1) % 4 === 0;
+          const isLast = idx === steps.length - 1;
+
+          return (
             <div
               key={step.id}
-              className={`flex flex-col md:flex-row items-center border gap-10 ${
-                index % 2 !== 0 ? "md:flex-row-reverse" : ""
-              }`}
+              className="relative flex flex-col items-center text-center"
             >
-              {/* Screenshot */}
-              <div className="w-full md:w-1/2 flex justify-center">
-                <div className="w-[300px] h-[220px] relative  overflow-hidden   ">
-                  <Image
-                    src={step.screenshot}
-                    alt={step.title}
-                    fill
-                    className="object-contain p-2"
-                  />
-                
-                </div>
-                <div className="w-[300px] h-[220px] relative  overflow-hidden   ">
-                  <Image
-                    src={step.screenshot2}
-                    alt={step.title}
-                    fill
-                    className="object-contain p-4"
-                  />
-                  </div>
-              </div>
+              {/* Big Screenshot */}
+              <img
+                src={step.img}
+                alt={step.title}
+                className="w-72 h-64 object-contain mb-6"
+              />
 
-              {/* Text + Number */}
-              <div className="w-full md:w-1/2 relative">
-                <div className="flex items-center gap-4">
-                  <div className="bg-logotype text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">
-                    {step.id}
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    {step.title}
-                  </h3>
-                </div>
+              {/* Title */}
+              <h5 className="text-gray-700 font-semibold text-xl">
+                {step.title}
+              </h5>
 
-                <ul className="mt-4 list-disc list-inside text-gray-600 space-y-2">
-                  {step.desc.map((point, i) => (
-                    <li key={i}>{point}</li>
-                  ))}
-                </ul>
-              </div>
+              {/* Connector Arrows */}
+              {!isLast && (
+                <>
+                  {/* Horizontal Arrows */}
+                  {!isRowEnd && row % 2 === 0 && (
+                    <img
+                      src="/right.png"
+                      alt="arrow"
+                      className="absolute top-1/2 right-[-120px] w-28 h-auto"
+                    />
+                  )}
+                  {!isRowEnd && row % 2 !== 0 && (
+                    <img
+                      src="/back.png"
+                      alt="arrow"
+                      className="absolute top-1/2 left-[-120px] w-28 h-auto"
+                    />
+                  )}
+
+                  {/* Vertical Arrow ↓ at row end */}
+                  {isRowEnd && (
+                    <img
+                      src="/down.png"
+                      alt="arrow"
+                      className="absolute bottom-[-120px] left-1/2 transform -translate-x-1/2 w-20 h-auto"
+                    />
+                  )}
+                </>
+              )}
             </div>
-          ))}
-
-          {/* Connecting Arrows */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-[100px] w-[2px] h-[80%] border-dashed border-2 border-green-400 -z-10"></div>
-        </div>
+          );
+        })}
       </div>
-    </section>
+    </div>
   );
-};
-
-export default AppFlowDiagram;
+}

@@ -106,7 +106,7 @@ const CTAabout = () => {
           {/* Google Play */}
           <Link
             href={
-              "https:\\play.google.comstoreapps/details?id=com.si.dukan.hisab.dukan_hisab&hl=en"
+              "https://play.google.com/store/apps/details?id=com.si.dukan.hisab.dukan_hisab"
             }
             className="!no-underline"
           >

@@ -46,7 +46,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center  gap-4">
-            <Link href={"https:\\play.google.com\store\apps\details?id=com.si.dukan.hisab.dukan_hisab&hl=en"}>
+            <Link href={"https://play.google.com/store/apps/details?id=com.si.dukan.hisab.dukan_hisab"}>
             <button
               className="px-6 py-3 bg-logotype text-white font-semibold rounded-lg 
         hover:text-white transition-colors duration-300 
