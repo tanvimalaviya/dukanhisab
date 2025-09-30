@@ -49,7 +49,7 @@ const Footer = () => {
             <li>
               <a
                 href="/"
-                className="text-white transition-transform duration-300 hover:scale-105 hover:text-gray-300 inline-block"
+               className="hover:text-white !no-underline transition-transform duration-300 text-white  footer-link"
               >
                 Home
               </a>
@@ -63,17 +63,17 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/pricing" className="text-white transition">
+              <a href="/pricing" className="text-white transition !no-underline footer-link">
                 Pricing
               </a>
             </li>
             <li>
-              <a href="/about" className="text-white transition">
+              <a href="/about" className="text-white transition !no-underline footer-link">
                 About
               </a>
             </li>
             <li>
-              <a href="/contact" className="text-white transition">
+              <a href="/contact" className="text-white transition !no-underline footer-link">
                 Contact Us
               </a>
             </li>
@@ -83,16 +83,16 @@ const Footer = () => {
         {/* Resources */}
         <div>
           <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
-          <ul className="space-y-2">
+          <ul className="space-y-2  ">
             <li>
-              <a href="/faq" className="text-white transition">
+              <a href="/faq" className="text-white transition !no-underline footer-link">
                 FAQ
               </a>
             </li>
             <li>
               <a
                 href="https://dukanhisab.sathwarainfotech.com/public/terms_and_condition.html"
-                className="text-white transition"
+                className="text-white transition !no-underline footer-link"
               >
                 Terms & Conditions
               </a>
@@ -100,7 +100,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://dukanhisab.sathwarainfotech.com/public/privacy_policy.html"
-                className="text-white transition"
+                className="text-white transition !no-underline footer-link"
               >
                 Privacy Policy
               </a>

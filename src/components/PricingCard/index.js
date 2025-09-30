@@ -160,31 +160,32 @@ export default function PricingPage() {
       <div className="max-w-8xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-10">
-          {/* Toggle */}
-          <div className="mt-6 flex justify-center">
-            <div className="flex items-center bg-gray-200 rounded-full p-1">
-              <button
-                onClick={() => setBillingCycle("monthly")}
-                className={`px-6 py-2 rounded-full text-sm font-medium  transition ${
-                  billingCycle === "monthly"
-                    ? "bg-logotype text-white shadow !rounded-full"
-                    : "text-gray-700"
-                }`}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingCycle("yearly")}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition ${
-                  billingCycle === "yearly"
-                    ? "bg-logotype text-white shadow !rounded-full"
-                    : "text-gray-700"
-                }`}
-              >
-                Yearly
-              </button>
-            </div>
-          </div>
+        {/* Toggle */}
+<div className="mt-6 flex justify-center">
+  <div className="flex items-center bg-gray-200 rounded-full p-1">
+    <button
+      onClick={() => setBillingCycle("monthly")}
+      className={`px-6 py-2 !rounded-full text-sm font-medium transition ${
+        billingCycle === "monthly"
+          ? "bg-logotype !rounded-full text-white shadow"
+          : "text-gray-700"
+      }`}
+    >
+      Monthly
+    </button>
+    <button
+      onClick={() => setBillingCycle("yearly")}
+      className={`px-6 py-2 !rounded-full  text-sm font-medium transition ${
+        billingCycle === "yearly"
+          ? "bg-logotype text-white  !rounded-full shadow"
+          : "text-gray-700"
+      }`}
+    >
+      Yearly
+    </button>
+  </div>
+</div>
+
         </div>
 
         {/* Pricing Grid */}
@@ -192,7 +193,7 @@ export default function PricingPage() {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`rounded-2xl shadow-md p-8 flex flex-col border transition hover:scale-105 hover:shadow-xl ${
+              className={`rounded-2xl shadow-md p-8 flex flex-col border transition hover:scale-105 hover:shadow-sm ${
                 plan.highlighted
                   ? "border-logotype bg-white shadow-2xl"
                   : "border-gray-200 bg-white"
